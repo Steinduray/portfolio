@@ -185,35 +185,66 @@ body {
 }
 
 .skills-section {
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+  margin-top: 15px;
+  width: 12%;
+  background-color: rgba(245, 245, 245, 0.9 );
+  border-radius: 20px 20px 10px 10px;
+  padding: -70px;
+  min-width: 100px;
+}
+
+.skills-section li {
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+.skills-section2 {
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
   margin-top: 15px;
   width: 15%;
+  min-width: 200px;
   background-color: rgba(245, 245, 245, 0.9);
   border-radius: 20px 20px 10px 10px;
   padding: 10px;
 }
 
+.skills-section2 h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  
+}
 .skills-section h3 {
   margin-bottom: 1rem;
   text-align: center;
   
 }
 
-.skills-section ul {
+.skills-section2 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .skills-section li {
+  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  color: #777777;
+  font-size: 1rem;
+  color: #000000;
 }
 
-.skills-section li .bar {
+.skills-section2 li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.skills-section2 li .bar {
   width: 35%;
   height: 10px;
   background-color: #e6e6e6;
@@ -222,7 +253,7 @@ body {
   position: relative;
 }
 
-.skills-section li .bar span {
+.skills-section2 li .bar span {
   position: absolute;
   top: 0;
   left: 0;
@@ -231,22 +262,22 @@ body {
 }
 
 
-.skills-section li .bar .english {
+.skills-section2 li .bar .english {
   width: 100%;
   background-color: #007396;
 }
 
-.skills-section li .bar .german {
+.skills-section2 li .bar .german {
   width: 65%;
   background-color: #ac2471;
 }
 
-.skills-section li .bar .spanish {
+.skills-section2 li .bar .spanish {
   width: 40%;
   background-color: #ff5733;
 }
 
-.skills-section li .bar .dutch {
+.skills-section2 li .bar .dutch {
   width: 100%;
   background-color: #007436;
 }
@@ -464,18 +495,36 @@ body {
     background-color: rgba(235, 230, 230, 0.9);
     padding: 10px;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 450px auto;
+    grid-template-areas:
+      "basedfrom basedfrom"
+      "map map"
+      "mailtel address";
   }
-
-  .contact-details p {
+  
+  .contact-details h3 {
+    grid-area: basedfrom;
+  }
+  
+  .contact-details iframe {
+    grid-area: map;
+    width: 100%;
+    height: 450px;
+    border: none;
+  }
+  
+  #mail, #tel {
+    grid-area: mailtel;
+    text-align: left;
+  }
+  
+  .contact-details address {
+    grid-area: address;
     text-align: right;
   }
-
-     
-  .contact-details iframe {
-    width: 100%; 
-    height: 450px;
-    border: none; 
-  }
+  
   
   .form-group {
     margin-bottom: 20px;
